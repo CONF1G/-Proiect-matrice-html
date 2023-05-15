@@ -1,0 +1,114 @@
+<html>
+<head>
+<title >Tablouri patratice</title>
+<style>
+div {
+  background-color: lightgrey;
+  width: 600px;
+  border: 10px solid blue;
+  padding: 5px;
+  margin: 20px;
+}
+table, th, td {
+  border:1px solid black;
+}
+tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+</style>
+</head>
+<body>
+
+<h1 ><center>Tablouri patratice</h1>
+<p>Un tablou bidimensional este tablou pătratic sau matrice pătratică dacă numărul de linii este egal cu numărul de coloane.
+
+În această situație folosim pentru ambele dimensiuni o singură variabilă, de regulă n:</p>
+<br>
+<div>
+int n, A[100][100];
+</div>
+<h3>Exemplu: </h3>
+<table style="width:100%">
+  <tr>
+    <th>
+Matrice pătratică indexată de la 0</th>
+    <th>Matrice pătratică indexată de la 1</th>
+   
+  </tr>
+    <tr>
+    <td><img src="https://www.pbinfo.ro/resurse/9dc152/articole/matrice/matrice-patratica-01-0.png?1";></td>
+    <td><img src="https://www.pbinfo.ro/resurse/9dc152/articole/matrice/matrice-patratica-01-1.png";></td>
+  </tr>
+  </table>
+  <br>
+<p> Într-o matrice pătratică se disting o categorie specială de elemente, diagonalele. Un element al matricei aparține sau nu diagonalelor sau zonelor delimitate de acestea dacă respectă anumite reguli, în care intervin indicii elementului, nu valoarea elementului. În cele ce urmează, pentru un element oarecare al matricei vom nota cu i indicele de linie și cu j indicele de coloană.</p>
+
+<br>
+
+<h3>Diagonala principală</h3>
+<table style="width:100%">
+  <tr>
+    <th>
+Indexare de la 0</th>
+    <th>Indexare de la 1</th>
+   
+  </tr>
+    <tr>
+    <td><img src="https://www.pbinfo.ro/resurse/9dc152/articole/matrice/matrice-patratica-02-0.png";></td>
+    <td><img src="https://www.pbinfo.ro/resurse/9dc152/articole/matrice/matrice-patratica-02-1.png";></td>
+  </tr>
+  <tr>
+  <td><center>i = j</td>
+    <td><center>i = j</td>
+  </tr>
+  </table>
+  <br>
+  <p>Parcurgerea elementelor de pe diagonala principală:</p>
+  <div><pre>
+for(int i = 0 ; i < n ; i ++)
+{
+    // A[i][i]
+}
+</div>
+<br>
+
+<h3>Diagonala secundară</h3>
+<table style="width:100%">
+  <tr>
+    <th>
+Indexare de la 0</th>
+    <th>Indexare de la 1</th>
+   
+  </tr>
+    <tr>
+    <td><img src="https://www.pbinfo.ro/resurse/9dc152/articole/matrice/matrice-patratica-03-0.png";></td>
+    <td><img src="https://www.pbinfo.ro/resurse/9dc152/articole/matrice/matrice-patratica-03-1.png";></td>
+  </tr>
+    </tr>
+  <tr>
+  <td><center>i + j = n - 1</td>
+    <td><center>i + j = n + 1</td>
+  </tr>
+  </table>
+  <br>
+  <p>Parcurgerea elementelor de pe diagonala secundară:</p>
+  <div><pre>
+//indexare de la 0
+for(int i = 0 ; i < n ; i ++)
+{
+    // A[i][n - 1 - i]
+}
+
+//indexare de la 1
+for(int i = 1 ; i <= n ; i ++)
+{
+    // A[i][n + 1 - i]
+}
+</div>
+
+</body>
+</html>
